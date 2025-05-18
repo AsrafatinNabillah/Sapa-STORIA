@@ -1,0 +1,211 @@
+@media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+    #map {
+      height: 300px;
+    }
+  }
+  
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #be5985;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Izinkan pengguliran jika konten melebihi tinggi */
+    max-height: 90vh; /* Batasi tinggi maksimum untuk pengguliran */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 30px; /* Tambahkan margin bawah untuk judul */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="file"], input[type="number"], select {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #e69db8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Menambahkan kursor pointer untuk tombol */
+    margin-bottom: 10px; /* Menambahkan jarak bawah */
+}
+
+button:hover {
+    background-color: #ffd0c7;
+}
+
+.action-button {
+    padding: 10px;
+    background-color: #ffb8e0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Menambahkan kursor pointer untuk tombol */
+    margin-bottom: 10px; /* Menambahkan jarak bawah */
+}
+
+.action-button:hover {
+    background-color: #ffd0c7;
+}
+
+.story-item {
+    margin: 15px 0; /* Tambahkan margin atas dan bawah untuk pemisahan */
+    padding: 15px; /* Tambahkan padding untuk ruang di dalam elemen */
+    border: 1px solid #ffedfa; /* Tambahkan border untuk membedakan setiap cerita */
+    border-radius: 5px; /* Tambahkan border-radius untuk sudut yang lebih halus */
+    background-color: #ffffff; /* Warna latar belakang putih untuk setiap cerita */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk efek kedalaman */
+    transition: transform 0.2s; /* Tambahkan transisi untuk efek timbul */
+}
+  
+.story-item.popup-effect {
+   transform: scale(1.05);
+   z-index: 10;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+   position: relative;
+ }
+
+.story-item:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* supaya margin bawah hilang */
+}
+
+.story-item img {
+  pointer-events: none;
+  user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+img:active,
+img:focus {
+  outline: none;
+}
+
+.story-item.highlight {
+    transform: scale(1.05); /* Efek timbul saat cerita dipencet */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam saat dipencet */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transisi untuk efek yang halus */
+}
+
+.story.description {
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+#video {
+    width: 100%; /* Mengatur lebar video agar sesuai dengan lebar kontainer */
+    height: auto; /* Mengatur tinggi otomatis untuk menjaga rasio aspek */
+    border: 2px solid #be5985;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px; /* Mengurangi padding pada perangkat kecil */
+    }
+
+    button {
+        font-size: 14px; /* Mengubah ukuran font tombol */
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], input[type="file"] {
+        font-size: 14px; /* Mengubah ukuran font input */
+    }
+}
+
+/* Styling untuk section */
+section {
+    margin-bottom: 20px; /* Tambahkan margin bawah untuk setiap section */
+    padding: 15px; /* Tambahkan padding untuk ruang di dalam section */
+    border: 1px solid #ffedfa; /* Tambahkan border untuk membedakan section ced4da */
+    border-radius: 5px; /* Tambahkan border-radius untuk sudut yang lebih halus */
+    background-color: #f8f9fa; /* Warna latar belakang yang lebih terang */
+}
+
+#authSection, #storySection {
+    display: none; /* Sembunyikan elemen secara default */
+}
+
+section[data-transition] {
+    view-transition-name: page;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .fade-out {
+    opacity: 0;
+  }
+  
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+.close-modal {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
