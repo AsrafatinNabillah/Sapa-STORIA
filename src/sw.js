@@ -1,17 +1,17 @@
 const CACHE_NAME = 'story-app-cache-v2';
 const API_CACHE_NAME = 'story-api-cache-v1';
 const FILES_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/main.css',
-  '/bundle.js',
-  '/S.ico',
-  '/manifest.json',
-  '/ScreenshotDesktop.png',
-  '/ScreenshotMobile.png',
-  '/S-96.png',
-  '/S-192.png',
-  '/S-512.png'
+  '/Sapa-STORIA/',
+  '/Sapa-STORIA/index.html',
+  '/Sapa-STORIA/main.css',
+  '/Sapa-STORIA/bundle.js',
+  '/Sapa-STORIA/S.ico',
+  '/Sapa-STORIA/manifest.json',
+  '/Sapa-STORIA/ScreenshotDesktop.png',
+  '/Sapa-STORIA/ScreenshotMobile.png',
+  '/Sapa-STORIA/S-96.png',
+  '/Sapa-STORIA/S-192.png',
+  '/Sapa-STORIA/S-512.png'
 ];
 
 const API_ENDPOINTS = [
