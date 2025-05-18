@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   view.showSection('auth');
   window.view = view;
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('./sw.js')
       .then((registration) => {
         console.log('Service Worker berhasil didaftarkan:', registration);
       })
