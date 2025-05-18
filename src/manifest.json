@@ -37,7 +37,7 @@
       "name": "Lihat Cerita",
       "short_name": "Storia",
       "description": "Langsung ke daftar cerita yang Storia dibagikan",
-      "url": "/Sapa-STORIA/#stories",
+      "url": "/Sapa-STORIA/",
       "icons": [{ "src": "/Sapa-STORIA/S-96.png", "sizes": "96x96" }]
     }
   ]
