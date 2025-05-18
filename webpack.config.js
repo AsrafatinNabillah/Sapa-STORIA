@@ -8,7 +8,8 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true, // hapus isi dist setiap build
+    clean: true,
+    publicPath: '/Sapa-STORIA/'
   },
   module: {
     rules: [
