@@ -1,0 +1,43 @@
+{
+  "name": "Sapa Storia",
+  "short_name": "Storia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F1E7E7",
+  "theme_color": "#E69DB8",
+  "icons": [
+    {
+      "src": "/S-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/S-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/ScreenshotDesktop.png",
+      "sizes": "1365x768",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/ScreenshotMobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Lihat Cerita",
+      "short_name": "Storia",
+      "description": "Langsung ke daftar cerita yang Storia dibagikan",
+      "url": "/#stories",
+      "icons": [{ "src": "/S-96.png", "sizes": "96x96" }]
+    }
+  ]
+}
