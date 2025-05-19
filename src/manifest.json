@@ -1,6 +1,7 @@
 {
   "name": "Sapa Storia",
   "short_name": "Storia",
+  "_version": "2.0",
   "start_url": "/Sapa-STORIA/",
   "display": "standalone",
   "background_color": "#F1E7E7",
