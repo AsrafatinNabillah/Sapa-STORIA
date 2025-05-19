@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   view.setPresenter(presenter);
   view.showSection('auth');
   window.view = view;
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('goto') === 'stories') {
+    view.showSection('stories');
+  }
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/Sapa-STORIA/sw.js')
       .then((registration) => {
