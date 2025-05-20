@@ -6,7 +6,7 @@
   "display": "standalone",
   "background_color": "#F1E7E7",
   "theme_color": "#E69DB8",
-  "scope": "/Sapa-STORIA/",               
+  "scope": "/Sapa-STORIA/",            
   "icons": [
     {
       "src": "/Sapa-STORIA/S-192.png",

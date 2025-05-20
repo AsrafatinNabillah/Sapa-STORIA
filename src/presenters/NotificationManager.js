@@ -89,9 +89,6 @@ async function unsubscribePushManager(token) {
   }
 }
 
-// NotificationManager.js
-
-// Handler dideklarasikan di luar agar referensinya tetap sama saat removeEventListener
 let subscribeHandler = null;
 let unsubscribeHandler = null;
 
@@ -105,7 +102,6 @@ function setupNotificationButtons(token) {
     return;
   }
 
-  // Jika sudah ada handler, hapus dulu event listener lama
   if (subscribeHandler) {
     subscribeBtn.removeEventListener('click', subscribeHandler);
   }
@@ -113,7 +109,6 @@ function setupNotificationButtons(token) {
     unsubscribeBtn.removeEventListener('click', unsubscribeHandler);
   }
 
-  // Definisikan handler baru
   subscribeHandler = async () => {
     console.log('Subscribe button clicked');
     await initPushManager(token);
@@ -124,7 +119,6 @@ function setupNotificationButtons(token) {
     await unsubscribePushManager(token);
   };
 
-  // Pasang event listener dengan handler baru
   subscribeBtn.addEventListener('click', subscribeHandler);
   unsubscribeBtn.addEventListener('click', unsubscribeHandler);
 }

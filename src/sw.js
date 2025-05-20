@@ -78,20 +78,13 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Handle navigation requests (HTML pages)
   if (request.mode === 'navigate') {
     event.respondWith(
-      fetch(request)
-        .then(networkResponse => {
-          // Update cache with fresh page
-          caches.open(CACHE_NAME)
-            .then(cache => cache.put(request, networkResponse.clone()));
-          return networkResponse;
-        })
-        .catch(() => {
-          // Return cached index.html when offline
-          return caches.match('/index.html');
-        })
+      caches.match(request).then((cachedResponse) => {
+        return cachedResponse || caches.match('/Sapa-STORIA/index.html')
+          .then((fallbackResponse) => fallbackResponse || fetch(request))
+          .catch(() => new Response('<h1>Offline</h1>', { headers: { 'Content-Type': 'text/html' }}));
+      })
     );
     return;
   }
@@ -108,7 +101,7 @@ self.addEventListener('push', (event) => {
     title: 'Story berhasil dibuat',
     options: {
       body: 'Anda telah membuat story baru.',
-      icon: '/S.ico',
+      icon: '/Sapa-STORIA/S.ico',
     }
   };
 

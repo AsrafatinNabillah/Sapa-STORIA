@@ -131,6 +131,10 @@ class StoryPresenter {
           this.view.authSection.style.display = 'none';
           this.view.storySection.style.display = 'block';
           await this.view.fadeIn(this.view.storySection);
+          const token = localStorage.getItem('authToken');
+          if (token) {
+            setupNotificationButtons(token); // ✅ Pasang ulang tombol notifikasi
+          }
           await this.handleLoadStories();
         } else if (hash === '#logout') {
           this.logout(); // logout user
