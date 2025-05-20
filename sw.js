@@ -1,17 +1,17 @@
 const CACHE_NAME = 'story-app-cache-v2';
 const API_CACHE_NAME = 'story-api-cache-v1';
 const FILES_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/main.css',
-  '/bundle.js',
-  '/S.ico',
-  '/manifest.json',
-  '/ScreenshotDesktop.png',
-  '/ScreenshotMobile.png',
-  '/S-96.png',
-  '/S-192.png',
-  '/S-512.png'
+  '/Sapa-STORIA/',
+  '/Sapa-STORIA/index.html',
+  '/Sapa-STORIA/main.css',
+  '/Sapa-STORIA/bundle.js',
+  '/Sapa-STORIA/S.ico',
+  '/Sapa-STORIA/manifest.json',
+  '/Sapa-STORIA/ScreenshotDesktop.png',
+  '/Sapa-STORIA/ScreenshotMobile.png',
+  '/Sapa-STORIA/S-96.png',
+  '/Sapa-STORIA/S-192.png',
+  '/Sapa-STORIA/S-512.png'
 ];
 
 const API_ENDPOINTS = [
@@ -78,20 +78,13 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Handle navigation requests (HTML pages)
   if (request.mode === 'navigate') {
     event.respondWith(
-      fetch(request)
-        .then(networkResponse => {
-          // Update cache with fresh page
-          caches.open(CACHE_NAME)
-            .then(cache => cache.put(request, networkResponse.clone()));
-          return networkResponse;
-        })
-        .catch(() => {
-          // Return cached index.html when offline
-          return caches.match('/index.html');
-        })
+      caches.match(request).then((cachedResponse) => {
+        return cachedResponse || caches.match('/Sapa-STORIA/index.html')
+          .then((fallbackResponse) => fallbackResponse || fetch(request))
+          .catch(() => new Response('<h1>Offline</h1>', { headers: { 'Content-Type': 'text/html' }}));
+      })
     );
     return;
   }
@@ -108,7 +101,7 @@ self.addEventListener('push', (event) => {
     title: 'Story berhasil dibuat',
     options: {
       body: 'Anda telah membuat story baru.',
-      icon: '/S.ico',
+      icon: '/Sapa-STORIA/S.ico',
     }
   };
 

@@ -1,11 +1,12 @@
 {
   "name": "Sapa Storia",
   "short_name": "Storia",
+  "_version": "2.0",
   "start_url": "/Sapa-STORIA/",
   "display": "standalone",
   "background_color": "#F1E7E7",
   "theme_color": "#E69DB8",
-  "scope": "/Sapa-STORIA/",               
+  "scope": "/Sapa-STORIA/",            
   "icons": [
     {
       "src": "/Sapa-STORIA/S-192.png",
@@ -37,7 +38,7 @@
       "name": "Lihat Cerita",
       "short_name": "Storia",
       "description": "Langsung ke daftar cerita yang Storia dibagikan",
-      "url": "/#stories",
+      "url": "/Sapa-STORIA/?goto=stories",
       "icons": [{ "src": "/Sapa-STORIA/S-96.png", "sizes": "96x96" }]
     }
   ]
